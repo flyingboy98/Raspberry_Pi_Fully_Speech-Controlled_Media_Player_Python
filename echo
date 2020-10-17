@@ -1,0 +1,26 @@
+#!/bin/sh
+
+#引数のチェック
+if [ $# -ne 1 ]; then
+  echo "invalid argument.";
+  exit 1;
+fi
+
+#一時ファイルを保存するディレクトリ
+TMPDIR=./tmp
+TMPFILE=${TMPDIR}/tmp.wav
+
+echo "$1" | open_jtalk \
+-m /usr/share/hts-voice/htsvoice-tohoku-f01/tohoku-f01-neutral.htsvoice \
+-x /var/lib/mecab/dic/open-jtalk/naist-jdic \
+-r 1.1 \
+-ow $TMPFILE
+
+#再生
+aplay --quiet ${TMPFILE}
+
+#一時ファイルを削除
+rm ${TMPFILE}
+
+exit 0;
+
