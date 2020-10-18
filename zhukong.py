@@ -28,7 +28,7 @@ def LuYin():
 def ShiBie():
     wenben = ""
     model = Model("model")
-    rec = KaldiRecognizer(model, 16000, "继 续 检 搜 索 全 部 无 损 听 歌 播 放 音 乐 停 止 诗 词 单 曲 专 辑 循 环 顺 序 随 评 书 朗 读 关 机 复 制 上 下 一 首 个 从 头 添 加 收 藏 中 文 日 语 英 更 新 升 级")
+    rec = KaldiRecognizer(model, 16000, "继 续 检 搜 索 全 部 无 损 播 放 音 乐 停 止 诗 词 单 曲 专 辑 循 环 顺 序 随 评 书 朗 读 关 机 复 制 上 下 一 首 个 从 头 添 加 收 藏 中 文 日 语 英 更 新 升 级")
     WaveWenJian = open("yuyin.wav", "rb")
     WaveWenJian.read(44)
     while True:
@@ -64,7 +64,6 @@ os.chdir('/home/pi/Documents/yuyinbofang')
 
 MingLing = ""
 ZiDian_MingLing = {
-    "听歌":"bf_yinyue",
     "播放音乐":"bf_yinyue",
     "播放无损":"bf_wusun",
     "播放诗词":"bf_shici",
