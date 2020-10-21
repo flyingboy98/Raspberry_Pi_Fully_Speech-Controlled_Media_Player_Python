@@ -262,11 +262,14 @@
 目前问题：
 
 　　＊首次运行建议连接外设，出现问题便于处理。
+  
 　　＊speech_recognition通过麦克风录音不稳定，经常没反应，等一会或反复开关并语音输入仍无反应需要重启。最好用质量好点的USB麦克。
 
 　　＊打开语音开关后要等待三到五秒加载录音模块。系统启动后只有初次输入语音命令前有语音提示＂有事您说话＂，之后没有这个提示。有没有提示都要等待三到五秒。
 
 　　＊由于发音，周围环境，输入时机和麦克质量的关系，命令识别会有错误发生。
+  
+　　＊开机自启动目前只能在Pi 3A+上实现。
   
   
 
@@ -275,22 +278,36 @@
 　　＊系统音频设置：
 
 　　　sudo vi /usr/share/alsa/alsa.conf
-     修改：
-     defaults.pcm.card 0
-     为：
-     defaults.pcm.card 2
-     建立文件：
-     sudo vi /etc/alsa/asound.conf
-     添加下列内容：
-     pcm.!default {
-       type asym
+   
+　　　修改defaults.pcm.card 0 的值为2
+
+　　　修改defaults.pcm.subdevice -1 的值为0
+     
+　　　建立文件：
+     
+　　　sudo vi /etc/alsa/asound.conf
+     
+　　　添加下列内容：
+     
+
+　　  pcm.!default {
+     
+　　　  type asym
+       
        playback.pcm
+       
        {
+       
          type hw
+         
          card 1
+         
          device 0
+         
        }
+       
      }
+     
      
 　　＊建立自启动服务：
   
@@ -305,7 +322,6 @@
 　　　After=multi-user.target
 
 
-
 　　　[Service]
 
 　　　WorkingDirectory=/home/pi/Documents/yuyinbofang
@@ -313,12 +329,11 @@
 　　　ExecStart=/usr/bin/python3 zhukong.py
 
 
-
 　　　[Install]
 
 　　　WantedBy=multi-user.target
 
-　　　Ctrl-x，选"Y"，保存退出。
+　　　Ctrl-x，"Y"保存退出。
 
 
 　　　启动服务：调试无误后再启动。
@@ -342,11 +357,9 @@ vosk识别语言更改：
 
 　　＊下载相应语言的model，解压后并替换yuyinbofang/model。
 
-　　＊修改yuyinbofang/zhukong.py中ZiDian_MingLing中的键值(key)，
-改成相应的语言。
+　　＊修改yuyinbofang/zhukong.py中ZiDian_MingLing中的键值(key)，改成相应的语言。
 
-　　＊修改yuyinbofang/zhukong.py中模块ShiBie的rec = KaldiRecognizer，
-把识别关键字改为相应的语言。
+　　＊修改yuyinbofang/zhukong.py中模块ShiBie的rec = KaldiRecognizer，把识别关键字改为相应的语言。
 
 
 
