@@ -1,5 +1,4 @@
-﻿　　树莓派全语音控制媒体播放器(Fully Speech-Controlled Meadia Player)，
-实现了无鼠标键盘显示器等外设的情况下，完全通过麦克风输入语音命令来控制媒体播放。
+﻿　　树莓派全语音控制媒体播放器(Fully Speech-Controlled Meadia Player)，可以在无鼠标键盘显示器等外设的情况下(Headless)，完全通过麦克风输入语音命令来控制媒体播放。
 
 
 
@@ -289,10 +288,9 @@
      
 　　　添加下列内容：
      
-
-　　  pcm.!default {
+     pcm.!default {
      
-　　　  type asym
+       type asym
        
        playback.pcm
        
