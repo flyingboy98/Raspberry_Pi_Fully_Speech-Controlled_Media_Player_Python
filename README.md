@@ -1,10 +1,10 @@
-﻿　　树莓派全语音控制媒体播放器(Fully Speech-Controlled Meadia Player)，可以在无鼠标键盘显示器等外设的情况下(Headless)，完全通过麦克风输入语音命令来控制媒体播放。
+﻿　　树莓派全语音控制媒体播放器(Fully Speech-Controlled Media Player)
 
 
 
 主要特点：
 
-　　＊全程无外设操作。从导入媒体文件，播放，停止，到关机全程语音控制。
+　　＊全程无外设操作。可以在无鼠标键盘显示器等外设的情况下(Headless)，完全通过麦克风输入语音命令来控制媒体播放。从导入媒体文件，播放，停止，到关机全程语音控制。
 
 　　＊通过硬件开关控制语音输入。
 
@@ -344,7 +344,7 @@
 
 　　　sudo systemctl stop yuyinbofang.service
 
-　　　终止开机启动服务：
+　　　终止服务：
 
 　　　sudo systemctl disable yuyinbofang.service
 
