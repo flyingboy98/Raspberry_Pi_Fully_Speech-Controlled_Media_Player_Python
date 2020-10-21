@@ -265,9 +265,9 @@ def YuYan(MingLing):
                     yuyan = re.match(r'yuyan =(.*)(\n)?', line).group(1).strip(' ""')
                     break
     except:
-        yuyan = "zhongwen"
+        yuyan = MingLing
     if MingLing == "":
-        if yuyan == "zhongwen":
+        if yuyan == "zhongwen" or yuyan == "":
             SJK_DuiHua_YouBiao.execute('SELECT ZhongWen FROM yuyan')
             shuo = "python3 ../yy/bin/zhspeak.py "
         elif yuyan == "riyu":
@@ -287,14 +287,17 @@ def YuYan(MingLing):
             SJK_DuiHua_YouBiao.execute('SELECT YingYu FROM yuyan')
             shuo = "espeak "
         if MingLing != yuyan:
-            with open(PZ_WenJian) as f:
-                lines = f.readlines()
-                for line in lines:
-                    if line.find("yuyan") == 0:
-                        lines[lines.index(line)] = re.sub(r'=(.*)(\n)?', r'= '+MingLing+r'\n', line)
-                        break
-                with open(PZ_WenJian,'w') as f:
-                    f.writelines(lines)
+            try:
+                with open(PZ_WenJian) as f:
+                    lines = f.readlines()
+                    for line in lines:
+                        if line.find("yuyan") == 0:
+                            lines[lines.index(line)] = re.sub(r'=(.*)(\n)?', r'= '+MingLing+r'\n', line)
+                            break
+                    with open(PZ_WenJian,'w') as f:
+                        f.writelines(lines)
+            except:
+                pass
     duihua = SJK_DuiHua_YouBiao.fetchall()
     SJK_DuiHua_LianJie.close()
     return (duihua, shuo)
