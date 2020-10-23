@@ -104,7 +104,7 @@
 
 软件环境：
 
-　　＊系统RaspberryPi OS 10(Buster) with desktop(2020-08-20) kernel version 5.4。
+　　＊系统RaspberryPi OS 10(Buster) with desktop(2020-05-27)。
 
 　　＊语音录制采用sphinx的speech_recognition模块。
 
@@ -268,11 +268,10 @@
 
 　　＊由于发音，周围环境，输入时机和麦克质量的关系，命令识别会有错误发生。
   
-　　＊开机自启动目前只能在Pi 3A+上实现。
   
   
 
-设置开机自启动(Pi 3A+测试通过)：
+设置开机自启动：
 
 　　＊系统音频设置：
 
