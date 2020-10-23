@@ -361,4 +361,13 @@ vosk识别语言更改：
 
 
 
+完整系统映像zip压缩包：
+
+　　＊链接: https://pan.baidu.com/s/1AHgMTt2HKm0RcD47uLf-Zg 提取码: 9wbe
+  
+　　＊无密码，解压后映像文件大小：7969177600字节。
+  
+　　＊映像系统包括本软件和四轮驱动小车(https://github.com/flyingboy98/Raspberry_Pi_4WD_Cart_With_Voice_Broadcast_Controlled_Via_VNC_Python_Opencv.git)。
+
+
 
