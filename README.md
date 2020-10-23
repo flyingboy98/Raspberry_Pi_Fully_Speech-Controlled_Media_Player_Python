@@ -361,7 +361,7 @@ vosk识别语言更改：
 
 
 
-完整系统映像zip压缩包：
+完整系统映像压缩包：
 
 　　＊链接: https://pan.baidu.com/s/1AHgMTt2HKm0RcD47uLf-Zg 提取码: 9wbe
   
