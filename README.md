@@ -137,11 +137,13 @@
 　　　sudo usermod -aG audio pi
    
 
-　　　升级pip并安装相关模块：为实现"headless"(无外设)，要用systemctl使系统启动后自动进入后台守护进程(daemon)，"pip3 install"前必须加"sudo"！如果连接外设手动启动程序，可以不加。如果用pip3安装太慢可以到PyPI手动下载，然后用"sudo dpkg -i"安装。
+　　　升级pip并安装相关模块：为实现"headless"(无外设)，要用systemctl使系统启动后自动进入后台守护进程(daemon)，"pip3 install"前必须加"sudo"！如果连接外设手动启动程序，可以不加。如果用pip3安装太慢可以到PyPI手动下载安装。
 
 　　　sudo -H pip3 install --upgrade pip
 
 　　　sudo pip3 install RPi.GPIO
+
+　　　sudo pip3 install PyAudio
 
 　　　sudo pip3 install pyttsx3
 
