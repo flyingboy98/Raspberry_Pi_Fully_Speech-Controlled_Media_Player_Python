@@ -126,7 +126,7 @@
 
 　　　mkdir /home/pi/Music/mp3 /home/pi/Music/wav
 
-　　　mkdir /home/pi/Music/mp3/shici /home/pi/Music/mp3/yinyue /home/pi/Music/mp3/pingshu /home/pi/Music/mp3/langdu
+　　　mkdir /home/pi/Music/mp3/shici /home/pi/Music/mp3/yinyue /home/pi/Music/mp3/pingshu /home/pi/Music/mp3/langdu /home/pi/Music/mp3/xiangsheng /home/pi/Music/mp3/jiangtan
 
 　　　chmod 755 echo
 
@@ -172,7 +172,7 @@
 
 　　＊媒体文件拷贝到USB存储设备：这步适用于语音命令＂复制＂自动拷贝，手动拷贝可省略。
 
-　　　在USB存储设备上建立文件夹Music(注意大写)，然后在Music下建立mp3和wav两个子文件夹，再在mp3下建立yinyue，shici, langdu，pingshu四个子文件夹。把准备好的媒体文件分类拷贝到各个文件夹中。
+　　　在USB存储设备上建立文件夹Music(注意大写)，然后在Music下建立mp3和wav两个子文件夹，再在mp3下建立yinyue，shici, langdu，pingshu，xiangsheng，jiangtan六个子文件夹。把准备好的媒体文件分类拷贝到各个文件夹中，没有的可以空着。
 
 
 
@@ -188,7 +188,7 @@
 
 
 
-　　＊检索媒体：使用命令＂搜索全部＂或其它分类检索命令。等待语音提示完成检索。在Pi 3A+上检索7000个媒体文件大概需要三十秒。
+　　＊检索媒体：使用命令＂搜索全部＂或其它分类检索命令。等待语音提示完成检索。在Pi 3A+上检索7000个媒体文件大概需要十多分钟。
 
 
 
